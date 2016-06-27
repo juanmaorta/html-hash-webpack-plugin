@@ -1,0 +1,24 @@
+{
+  "name": "html-hash-webpack-plugin",
+  "version": "0.0.1",
+  "description": "webpack plugin that parse HTML in search of hashable js chunks\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanmaorta/html-hash-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "html",
+    "hash"
+  ],
+  "author": "Juanma Orta",
+  "license": "ISC",
+  "dependencies": {
+    "webpack-core": "^0.6.8"
+  }
+}
