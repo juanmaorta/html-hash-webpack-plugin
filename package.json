@@ -1,6 +1,6 @@
 {
   "name": "html-hash-webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "webpack plugin that parse HTML in search of hashable js chunks\"",
   "main": "index.js",
   "scripts": {
