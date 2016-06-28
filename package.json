@@ -1,10 +1,10 @@
 {
   "name": "html-hash-webpack-plugin",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "webpack plugin that parse HTML in search of hashable js chunks\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,12 @@
     "html",
     "hash"
   ],
-  "author": "Juanma Orta",
-  "license": "ISC",
-  "dependencies": {
-    "webpack-core": "^0.6.8"
+  "author": "Juanma Orta <juanma.orta@gmail.com> (https://github.com/juanmaorta)",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.13.1"
   }
 }
