@@ -16,6 +16,8 @@ Webpack chunks/entries should have dynamic names (with [id], [hash], [chunkhash]
 Plugin works nice with '''webpack-md5-hash''' plugin, so you can have vendors.[chunkhash].js file with libs,
 which will not change so often and can be cached in browser; and index.[chunkhash].js, which will change more often, after any code modification.
 
+Also, if you use '''extract-text-webpack-plugin''' to, for example, to separate css from js, plugin will handle it
+
 # Installation
 
 ```
@@ -39,12 +41,15 @@ module.exports = {
         filename: "[name].[chunkhash].js"
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendors', '[name].[chunkhash].js'),
         new HtmlHashPlugin({
             origin: 'src/',
             output: 'public/',
             html_file: 'index.html' // default_
-        })
+        }),
+        new webpack.optimize.CommonsChunkPlugin('vendors', '[name].[chunkhash].js'), // optional
+
+        new WebpackMd5Hash(), /// optional
+        new ExtractTextPlugin("index.[contenthash].css"), // optional
     ]
 }
 
